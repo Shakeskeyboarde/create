@@ -59,6 +59,7 @@ await write('package.json', {
   scripts: {
     build: 'tsc -p ./src/tsconfig.build.json',
     test: 'eslint . --max-warnings=0 && vitest run --pass-with-no-tests',
+    'open-coverage': 'open out/coverage/index.html',
   },
   files: [
     'lib',
