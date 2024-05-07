@@ -1,7 +1,7 @@
 {
   "name": "@chrisackerman/create",
   "description": "My own personal PNPM init script.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "ISC",
   "repository": {
     "type": "git",
@@ -13,6 +13,10 @@
     "test": "eslint . --max-warnings=0 && vitest run --pass-with-no-tests",
     "prepublishOnly": "pnpm build && pnpm test"
   },
+  "files": [
+    ".gitignore",
+    "*"
+  ],
   "publishConfig": {
     "access": "public"
   },
