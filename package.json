@@ -1,0 +1,33 @@
+{
+  "name": "@chrisackerman/create",
+  "description": "My own personal PNPM init script.",
+  "version": "0.0.1",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Shakeskeyboarde/create.git"
+  },
+  "packageManager": "pnpm@9.1.0+sha256.22e36fba7f4880ecf749a5ca128b8435da085ecd49575e7fb9e64d6bf4fad394",
+  "scripts": {
+    "build": "rm -rf ./lib && tsc -p ./src/tsconfig.build.json && chmod +x ./lib/bin.js",
+    "test": "eslint . --max-warnings=0 && vitest run --pass-with-no-tests",
+    "prepublishOnly": "pnpm build && pnpm test"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "bin": "./lib/bin.js",
+  "devDependencies": {
+    "@types/node": "^20.12.10",
+    "@vitest/coverage-v8": "^1.6.0",
+    "eslint": "^8.57.0",
+    "eslint-config-rational": "^5.0.12",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "execa": "^8.0.1"
+  }
+}
