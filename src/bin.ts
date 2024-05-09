@@ -63,7 +63,7 @@ await write('package.json', {
     'open-coverage': 'open out/coverage/index.html',
   },
   files: [
-    'lib',
+    'dist',
   ],
   publishConfig: {
     access: 'public',
@@ -81,9 +81,11 @@ await write('package.json', {
 
 await cp('.github');
 await cp('.gitignore');
+await cp('CONTRIBUTING.md');
 await cp('eslint.config.js');
 await cp('index.html');
 await cp('LICENSE');
+await cp('README.md');
 await cp('tsconfig.json');
 await cp('vite.config.ts');
 await cp('vitest.setup.ts');
