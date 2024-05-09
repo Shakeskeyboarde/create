@@ -82,6 +82,7 @@ await write('package.json', {
 await cp('.github');
 await cp('.gitignore');
 await cp('eslint.config.js');
+await cp('index.html');
 await cp('LICENSE');
 await cp('tsconfig.json');
 await cp('vite.config.ts');
