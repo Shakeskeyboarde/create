@@ -15,7 +15,7 @@ export default mergeConfig(baseConfig, defineConfig({
     lib: {
       entry: './src/bin.ts',
       formats: ['es'],
-      fileName: '[name].js',
+      fileName: '[name]',
     },
     rollupOptions: {
       treeshake: false,
