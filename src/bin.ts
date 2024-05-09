@@ -57,7 +57,8 @@ await write('package.json', {
     url: 'https://github.com/Shakeskeyboarde/UNTITLED.git',
   },
   scripts: {
-    build: 'tsc -p ./src/tsconfig.build.json',
+    start: 'vite',
+    build: 'vite build',
     test: 'eslint . --max-warnings=0 && vitest run --pass-with-no-tests',
     'open-coverage': 'open out/coverage/index.html',
   },
