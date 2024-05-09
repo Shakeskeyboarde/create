@@ -90,7 +90,7 @@ await cp('src/index.ts');
 
 await $`corepack enable`;
 await $`corepack use pnpm@latest`;
-await $`pnpm i -D typescript @types/node eslint@^8 eslint-config-rational vitest @vitest/coverage-v8`;
+await $`pnpm i -D typescript @types/node eslint@^8 eslint-config-rational vite vite-plugin-checker vitest @vitest/coverage-v8`;
 
 if (await fs.access('.git').then(() => false, () => true)) {
   await $`git init`;
