@@ -83,10 +83,9 @@ await cp('.gitignore');
 await cp('eslint.config.js');
 await cp('LICENSE');
 await cp('tsconfig.json');
-await cp('vitest.config.ts');
+await cp('vite.config.ts');
 await cp('vitest.setup.ts');
 await cp('src/index.ts');
-await cp('src/tsconfig.build.json');
 
 await $`corepack enable`;
 await $`corepack use pnpm@latest`;
