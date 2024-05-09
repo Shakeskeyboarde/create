@@ -3,6 +3,7 @@ node_modules/
 lib/
 dist/
 out/
+coverage/
 
 .DS_Store
 *.tar
