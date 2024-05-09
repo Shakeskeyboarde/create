@@ -69,11 +69,11 @@ await write('package.json', {
     tag: 'prerelease',
   },
   type: 'module',
-  types: './lib/index.d.ts',
+  types: './dist/index.d.ts',
   exports: {
     '.': {
-      types: './lib/index.d.ts',
-      import: './lib/index.js',
+      types: './dist/index.d.ts',
+      import: './dist/index.js',
     },
   },
 });

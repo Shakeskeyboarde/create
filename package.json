@@ -1,7 +1,7 @@
 {
   "name": "@chrisackerman/create",
   "description": "My own personal PNPM init script.",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "license": "ISC",
   "repository": {
     "type": "git",
@@ -25,7 +25,7 @@
     "access": "public"
   },
   "type": "module",
-  "bin": "./lib/bin.js",
+  "bin": "./dist/bin.js",
   "devDependencies": {
     "@types/node": "^20.12.10",
     "@vitest/coverage-v8": "^1.6.0",
