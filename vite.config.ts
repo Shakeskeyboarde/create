@@ -3,9 +3,9 @@ import { checker } from 'vite-plugin-checker';
 
 // import { lib } from 'vite-plugin-auto-lib';
 // import externals from 'rollup-plugin-node-externals';
-// import dts from 'vite-plugin-dts';
 // import { data } from 'vite-plugin-data';
 // import bin from 'vite-plugin-bin';
+// import dts from 'vite-plugin-dts';
 
 const TEST_GLOBS = ['**/*.{test|spec}.*', '**/__{tests|mocks}__'];
 
@@ -16,9 +16,9 @@ export default defineConfig({
     checker({ typescript: true }),
     // lib(),
     // externals(),
-    // dts({ entryRoot: 'src', logLevel: 'error', exclude: TEST_GLOBS }),
     // data(),
     // bin(),
+    // dts({ entryRoot: 'src', logLevel: 'error', exclude: TEST_GLOBS }),
   ],
   test: {
     reporters: ['verbose'],

@@ -1,7 +1,7 @@
 {
   "name": "@chrisackerman/create",
   "description": "My own personal PNPM init script.",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "license": "ISC",
   "repository": {
     "type": "git",
@@ -34,7 +34,10 @@
     "rollup-plugin-node-externals": "^7.1.2",
     "typescript": "^5.4.5",
     "vite": "^5.2.11",
+    "vite-plugin-bin": "^1.0.2",
     "vite-plugin-checker": "^0.6.4",
+    "vite-plugin-config-lib": "^0.1.0",
+    "vite-plugin-dts": "^3.9.1",
     "vitest": "^1.6.0"
   },
   "dependencies": {

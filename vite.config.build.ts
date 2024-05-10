@@ -1,25 +1,23 @@
 import externals from 'rollup-plugin-node-externals';
 import { defineConfig, mergeConfig } from 'vite';
+import bin from 'vite-plugin-bin';
+import { lib } from 'vite-plugin-config-lib';
+import dts from 'vite-plugin-dts';
 
 import baseConfig from './vite.config.js';
 
 process.chdir(__dirname);
 
 export default mergeConfig(baseConfig, defineConfig({
-  plugins: [externals()],
-  // XXX: Replace build config with the vite-plugin-auto-lib configuration when ready.
-  build: {
-    target: 'esnext',
-    sourcemap: true,
-    minify: false,
-    lib: {
-      entry: './src/bin.ts',
-      formats: ['es'],
-      fileName: '[name]',
-    },
-    rollupOptions: {
-      treeshake: false,
-      output: { preserveModules: true },
-    },
-  },
+  plugins: [
+    lib(),
+    externals(),
+    bin(),
+    dts({
+      entryRoot: 'src',
+      logLevel: 'error',
+      exclude: ['**/*.{test|spec}.*', '**/__{tests|mocks}__'],
+    }),
+  ],
+  build: { target: 'node18' },
 }));

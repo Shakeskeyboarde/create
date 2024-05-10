@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import url from 'node:url';
@@ -89,7 +90,8 @@ await cp('README.md');
 await cp('tsconfig.json');
 await cp('vite.config.ts');
 await cp('vitest.setup.ts');
-await cp('src/index.ts');
+
+await write('src/index.ts', 'export {};\n');
 
 await $`corepack enable`;
 await $`corepack use pnpm@latest`;
