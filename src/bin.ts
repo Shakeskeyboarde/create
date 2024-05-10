@@ -32,6 +32,7 @@ const cp = async (filename: string): Promise<void> => {
 const write = async (filename: string, content: unknown): Promise<void> => {
   console.error(chalk.gray(`create: ${filename}`));
 
+  await fs.mkdir(path.dirname(filename), { recursive: true });
   await fs.writeFile(
     filename,
     typeof content === 'string' ? content : JSON.stringify(content, null, 2),
