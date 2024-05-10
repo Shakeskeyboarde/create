@@ -61,6 +61,7 @@ await write('package.json', {
     start: 'vite',
     build: 'vite build',
     test: 'eslint . --max-warnings=0 && vitest run --pass-with-no-tests',
+    prepublishOnly: 'pnpm build && pnpm test',
     'open-coverage': 'open out/coverage/index.html',
   },
   files: [
